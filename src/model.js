@@ -1,5 +1,6 @@
 import image from './assets/image.png'
 import { ImageBlock, TextBlock, TextColumnsBlock, TitleBlock} from "./Classes/blocks";
+import {css} from "./utils";
 
 const text = `
 I also got experience in creating UI With my own hands!`
@@ -8,7 +9,13 @@ I also got experience in creating UI With my own hands!`
 export const model = [
     new TitleBlock('Pure JavaScript website builder ', {
         tag: 'h2',
-        styles: ' background: linear-gradient(to right, #000, #eb7dfa); color: #fff;text-align: center; padding: 1.5rem'
+        styles: css({
+            background: "linear-gradient(to right, #000, #eb7dfa)",
+            color: "#fff",
+            'text-align': "center",
+             padding: "1.5rem"
+        })
+
     }),
     new ImageBlock(image, {
         styles: 'padding: 2rem 0;display: flex; justify-content: center;',
